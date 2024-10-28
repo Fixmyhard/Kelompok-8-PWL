@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Kelompok</title>
+    <link rel="stylesheet" href="../dist/styles.css">
+</head>
+<body class="bg-black text-gray-200">
+
+    <!-- Navbar -->
+    <nav class="bg-primary text-white py-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-end items-center px-4">
+            <ul class="flex space-x-6">
+                <li><a href="#profile" class="hover:text-secondary">Profile</a></li>
+                <li><a href="#skills" class="hover:text-secondary">Skills</a></li>
+                <li><a href="#projects" class="hover:text-secondary">Projects</a></li>
+                <li><a href="#game" class="hover:text-secondary">Fun Fact</a></li>
+                <li><a href="#contact" class="hover:text-secondary">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section id="profile" class="min-h-screen flex items-center justify-center">
+        <div class="bg-gray-800 p-8 rounded-lg shadow-lg max-w-sm w-full text-center">
+            <div class="flex items-center justify-center">
+                <img src="https://upload.wikimedia.org/wikipedia/jv/1/1d/Christiaan_Barnard.jpg" alt="Christiaan Barnard" class="w-30 h-30 rounded-full object-cover" />
+            </div>
+            <h2 id="profileName" class="text-2xl font-semibold text-primary">Christiaan Neethling Barnard</h2>
+            <p id="profileProfession" class="text-gray-400">Cardiac Surgeon & Pioneer</p>
+            <p id="profileDescription" class="mt-4 text-sm text-gray-500">Known for performing the world's first human heart transplant in 1967.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="min-h-screen bg-gray-900 flex items-center justify-center">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold text-primary">Skills</h2>
+            <p id="skillsList" class="mt-4 text-gray-400">Surgical techniques, cardiac care, medical research, and patient advocacy.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="min-h-screen flex items-center justify-center bg-gray-800">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold text-primary">Projects</h2>
+            <p class="mt-4 text-gray-400">Here are some significant contributions by Dr. Barnard:</p>
+            <ul id="projectsList" class="mt-6 space-y-4">
+                <li class="bg-gray-700 p-4 rounded-lg shadow hover:shadow-lg transition duration-200">Heart Transplantation: Revolutionizing cardiac surgery.</li>
+                <li class="bg-gray-700 p-4 rounded-lg shadow hover:shadow-lg transition duration-200">Pioneering work in artificial hearts and cardiac surgery.</li>
+                <li class="bg-gray-700 p-4 rounded-lg shadow hover:shadow-lg transition duration-200">Authoring numerous medical papers on cardiac health.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Fun Fact Section -->
+    <section id="game" class="min-h-screen bg-gray-900 flex items-center justify-center">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold text-primary">Fun Fact</h2>
+            <p id="funFactText" class="mt-4 text-gray-400 px-10">Christiaan Barnard's groundbreaking heart transplant in 1967 marked a new era in medicine, demonstrating the possibilities of surgery beyond previously accepted limits. His work continues to inspire generations of surgeons and medical professionals.</p>
+            <p id="funFactText" class="mt-4 text-gray-400 px-10">Just like in the world of medicine, I believe that each challenge we face, whether in surgery or personal endeavors, can lead to life-saving solutions and innovations.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="min-h-screen bg-gray-800 flex items-center justify-center">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold text-primary">Contact</h2>
+            <p class="mt-4 text-gray-400">Feel free to reach out via email: dariusdarren86@gmail.com</p>
+            <div class="mt-6 flex justify-center space-x-4">
+                <a href="mailto:dariusdarren86@gmail.com" class="text-primary hover:text-secondary">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 12.713l-11.99-7.506v14.572h23.98v-14.572l-11.99 7.506zM12 1.288l12 7.512v-.068c0-.702-.567-1.273-1.267-1.273h-21.466c-.7 0-1.267.571-1.267 1.273v.068l12-7.512z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+
+    window.onload = function() {
+        document.getElementById('profileName').innerText = localStorage.getItem('profileName') || 'Christiaan Neethling Barnard';
+        document.getElementById('profileProfession').innerText = localStorage.getItem('profileProfession') || 'Cardiac Surgeon & Pioneer';
+        document.getElementById('profileDescription').innerText = localStorage.getItem('profileDescription') || 'Known for performing the world\'s first human heart transplant in 1967...';
+        document.getElementById('skillsList').innerText = localStorage.getItem('skills') || 'Surgical techniques, cardiac care, medical research, and patient advocacy.';
+        document.getElementById('projectsList').innerHTML = (localStorage.getItem('projects') || '<li class="bg-gray-700 p-4 rounded-lg shadow">Heart Transplantation: Revolutionizing cardiac surgery.</li><li class="bg-gray-700 p-4 rounded-lg shadow">Pioneering work in artificial hearts and cardiac surgery.</li><li class="bg-gray-700 p-4 rounded-lg shadow">Authoring numerous medical papers on cardiac health.</li>');
+        document.getElementById('funFactText').innerText = localStorage.getItem('funFact') || 'Christiaan Barnard\'s groundbreaking heart transplant...';
+        document.getElementById('contactEmail').innerText = localStorage.getItem('contactEmail') || 'dariusdarren86@gmail.com';
+    };
+
+    function saveSectionData(section) {
+        if (section === 'profile') {
+            localStorage.setItem('profileName', document.getElementById('editProfileName').value);
+            localStorage.setItem('profileProfession', document.getElementById('editProfileProfession').value);
+            localStorage.setItem('profileDescription', document.getElementById('editProfileDescription').value);
+        } else if (section === 'skills') {
+            localStorage.setItem('skills', document.getElementById('editSkills').value);
+        } else if (section === 'projects') {
+            localStorage.setItem('projects', document.getElementById('editProjects').value);
+        } else if (section === 'funFact') {
+            localStorage.setItem('funFact', document.getElementById('editFunFact').value);
+        } else if (section === 'contact') {
+            localStorage.setItem('contactEmail', document.getElementById('editContactEmail').value);
+        }
+        alert(`${section.charAt(0).toUpperCase() + section.slice(1)} saved successfully!`);
+        window.location.reload();
+    }
+    </script>
+</body>
+</html>
