@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Web Profile</title>
+    <link rel="stylesheet" href="../../dist/styles.css">
+</head>
+
+<body class="bg-primary text-gray-200 p-6">
+
+    <h1 class="text-4xl font-bold mb-6 text-center">Edit Web Profile Sections</h1>
+
+    <div class="max-w-4xl mx-auto space-y-6">
+
+        <!-- Profile Section -->
+        <form id="profileForm" class="bg-gray-800 p-6 rounded-lg shadow-md">
+            <h2 class="text-3xl font-semibold mb-4">Profile</h2>
+            <label class="block mb-4">
+                <span class="text-gray-300">Name:</span>
+                <input type="text" id="editProfileName" class="mt-1 p-3 w-full rounded bg-gray-700 text-gray-200 border border-gray-600 focus:outline-none focus:ring focus:ring-indigo-500" />
+            </label>
+            <label class="block mb-4">
+                <span class="text-gray-300">Profession:</span>
+                <input type="text" id="editProfileProfession" class="mt-1 p-3 w-full rounded bg-gray-700 text-gray-200 border border-gray-600 focus:outline-none focus:ring focus:ring-indigo-500" />
+            </label>
+            <label class="block mb-4">
+                <span class="text-gray-300">Description:</span>
+                <textarea id="editProfileDescription" class="mt-1 p-3 w-full rounded bg-gray-700 text-gray-200 border border-gray-600 focus:outline-none focus:ring focus:ring-indigo-500"></textarea>
+            </label>
+            <button type="button" onclick="saveSectionData('profile')" class="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-500 transition">Save Profile</button>
+        </form>
+
+        <!-- Skills Section -->
+        <form id="skillsForm" class="bg-gray-800 p-6 rounded-lg shadow-md">
+            <h2 class="text-3xl font-semibold mb-4">Skills</h2>
+            <label class="block mb-4">
+                <span class="text-gray-300">Skills:</span>
+                <input type="text" id="editSkills" class="mt-1 p-3 w-full rounded bg-gray-700 text-gray-200 border border-gray-600 focus:outline-none focus:ring focus:ring-indigo-500" />
+            </label>
+            <button type="button" onclick="saveSectionData('skills')" class="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-500 transition">Save Skills</button>
+        </form>
+
+        <!-- Projects Section -->
+        <form id="projectsForm" class="bg-gray-800 p-6 rounded-lg shadow-md">
+            <h2 class="text-3xl font-semibold mb-4">Projects</h2>
+            <label class="block mb-4">
+                <span class="text-gray-300">Projects:</span>
+                <input type="text" id="editProjects" class="mt-1 p-3 w-full rounded bg-gray-700 text-gray-200 border border-gray-600 focus:outline-none focus:ring focus:ring-indigo-500" />
+            </label>
+            <button type="button" onclick="saveSectionData('projects')" class="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-500 transition">Save Projects</button>
+        </form>
+
+        <!-- Fun Fact Section -->
+        <form id="funFactForm" class="bg-gray-800 p-6 rounded-lg shadow-md">
+            <h2 class="text-3xl font-semibold mb-4">Fun Fact</h2>
+            <label class="block mb-4">
+                <span class="text-gray-300">Fun Fact:</span>
+                <textarea id="editFunFact" class="mt-1 p-3 w-full rounded bg-gray-700 text-gray-200 border border-gray-600 focus:outline-none focus:ring focus:ring-indigo-500"></textarea>
+            </label>
+            <button type="button" onclick="saveSectionData('funFact')" class="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-500 transition">Save Fun Fact</button>
+        </form>
+
+        <!-- Contact Section -->
+        <form id="contactForm" class="bg-gray-800 p-6 rounded-lg shadow-md">
+            <h2 class="text-3xl font-semibold mb-4">Contact</h2>
+            <label class="block mb-4">
+                <span class="text-gray-300">Email:</span>
+                <input type="email" id="editContactEmail" class="mt-1 p-3 w-full rounded bg-gray-700 text-gray-200 border border-gray-600 focus:outline-none focus:ring focus:ring-indigo-500" />
+            </label>
+            <button type="button" onclick="saveSectionData('contact')" class="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-500 transition">Save Contact</button>
+        </form>
+
+    </div>
+    <script src="data.js"></script>
+</body>
+
+</html>
