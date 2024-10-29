@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 {
     "liveServer.settings.port": 5502
 =======
 {
     "liveServer.settings.port": 5502
 >>>>>>> 9f3ac20 ( admin page)
+=======
+{
+    "liveServer.settings.port": 5502
+>>>>>>> 02b8fd0 (register-login)
 }

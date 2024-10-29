@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link href="../../dist/styles.css" rel="stylesheet">
+</head>
+<body class="bg-purple-900 min-h-screen flex items-center justify-center">
+
+  <div class="w-full max-w-6xl bg-primary rounded-lg shadow-lg overflow-hidden flex">
+    
+    <div class="w-full md:w-1/2 bg-purple-800 text-white p-8 flex flex-col justify-center relative">
+      <div class="mb-6 text-center">
+        <h2 class="text-3xl font-bold mb-2">Masuk</h2>
+        <p class="text-gray-300">Masuk menggunakan Akun terdaftar Kamu</p>
+      </div>
+
+      <form id="loginForm" class="space-y-4">
+
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
+          <input 
+            type="text" 
+            id="email" 
+            placeholder="Email" 
+            class="w-full px-4 py-2 rounded-full bg-purple-900 text-white focus:outline-none focus:ring-2 focus:ring-white placeholder-white">
+        </div>
+
+        <div>
+          <label for="password" class="block text-sm font-medium text-gray-300">Password</label>
+          <input 
+            type="password" 
+            id="password" 
+            placeholder="Password" 
+            class="w-full px-4 py-2 rounded-full bg-purple-900 text-white focus:outline-none focus:ring-2 focus:ring-white placeholder-white">
+        </div>
+
+        <div class="flex items-center justify-between">
+          <div>
+            <input type="checkbox" id="remember" class="mr-2">
+            <label for="remember" class="text-gray-300">Ingat saya</label>
+          </div>
+          <a href="#" class="text-sm text-white hover:underline">Lupa Password?</a>
+        </div>
+
+        <button 
+          type="submit" 
+          class="w-full py-3 rounded-full bg-black text-white font-bold hover:bg-white hover:text-black transition duration-200">
+          Masuk
+        </button>
+      </form>
+
+      <div class="mt-6 text-center">
+        <hr class="border-gray-500 mb-4">
+        <p class="text-white">Belum punya akun?</p>
+        <a href="register.html" class="text-white font-bold underline hover:text-gray-300">Daftar Sekarang</a>
+      </div>
+    </div>
+
+    <div class="hidden md:block md:w-1/2 bg-gradient-to-bl from-purple-700 via-purple-700 to-gray-700 relative">
+
+      <img 
+        src="https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/6715930/910/607/m2/fpnw/wm1/vehdb4tur0fg6yphaiumv2bmtplollhqll0gvubgxt58t7znz43m5enjos1cxcdn-.jpg?1563755523&s=a0d225b8dd80f6e1a95121d1493fb8ef" 
+        alt="Background Image" 
+        class="absolute inset-0 h-full w-full object-cover opacity-75">
+
+      <div class="absolute inset-0 bg-purple-800 bg-opacity-50"></div>
+    </div>
+  </div>
+
+  <script src="../admin/data.js"></script>
+  </script>
+
+</body>
+</html>
